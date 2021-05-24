@@ -109,7 +109,7 @@ More details in the code, with comments.
 
 ### The training result
   
- The scores and the rolling scores. The environment was solved in 233
+ The scores and the rolling scores. The environment was solved in 233 episodes.
  (This was the best result)
 
 ![result](https://github.com/plitkei/RL-Unity_MlAgents-Pytorch-Tennis.app/blob/main/result.jpg)
