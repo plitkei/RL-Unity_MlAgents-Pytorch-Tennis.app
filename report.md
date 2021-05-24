@@ -37,12 +37,12 @@ I have used gradient clipping when training the critic network as it was suggest
 
 I adopted the ddpg_agent to handle multiple Agents, they have their own Actor, Critic Networks.
   
-After countless days of Hyperparameter tuning and changes in the code, the performance was not enough.
+After countless days of Hyperparameter tuning and changes in the code, the performance was not good enough.
   
 Sometimes after a few tousand of episode the score have reached around 0.36
 I have tried everything...
  
-Then I started to realize adding Noise is a very, very critical part of this project so I paid more attention of the Ornstein-Uhlenbeck process.
+Then I started to realize adding Noise is a very, very critical part of this project so I paid more attention to the Ornstein-Uhlenbeck process.
   
 - First I had to admit that I had a significant bias towards positive values and that indeed resulted poor training
 After replacing the generator that draws samples from a Standard Normal distribution and thus generate a different nois sample for each agent as opposed to applying same noise to all agents.
