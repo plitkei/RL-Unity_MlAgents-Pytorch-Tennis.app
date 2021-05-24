@@ -112,7 +112,8 @@ More details in the code, with comments.
  The scores and the rolling scores. The environment was solved in 233
  (This was the best result)
 
-![result](https://github.com/plitkei/RL-Unity-MLAgents-Python-Pytorch-tennis.app/blob/main/result.jpg)
+![result](https://github.com/plitkei/RL-Unity_MlAgents-Pytorch-Tennis.app/blob/main/result.jpg)
+
 
 ### Future improvements
 
