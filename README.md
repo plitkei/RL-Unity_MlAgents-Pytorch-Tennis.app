@@ -34,6 +34,28 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 2. Place the file in your working directory and edit the path in the Tennis.ipynb 
 
+### Setting up the environment
+
+I would recommend to choose a fresh environmnet from the current ML-Agent github repo. 
+It is a bit more work at the begining, since you have to compile it for your system and you also need to install Unity. 
+The problem with the very old versions like this. It is almost immpossible to collect the right (old) versions of the python/pytorch/ML-Agents circle -just to name a few.
+
+If you have the curtesy to use a newer app. In the tennis.ipynb 
+do not use the:  *from unityagents import UnityEnvironment*
+Use the **from mlagents_envs.environment import UnityEnvironment**
+The unityagents are in a different folder in the newer version. So you **Do not** need to pip install unityagents. there is a package called like this and that is a very old version of the ML-Agents.
+
+This is how u can set up a new environment:
+https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
+
+
+*Basically, there is a Unity application what we will call from python with the ML-Agents help. That will be the connection between the unity app and the pytorch code in order to train the Agent.*
+
+
+We have our Actor - Critic DDPG model in the **model.py** file.
+And the modified DDPG algorithm to handle multiple agents that uses the model in the **ddpg_agent.py** file.
+The connection between unity and the model is in the **Tennis.ipynb**
+
 ### Instructions
 
 Run the entire Tennis.ipynb to train your own agent
@@ -42,4 +64,41 @@ Run the entire Tennis.ipynb to train your own agent
 ### Note
 
 The project environment is similar to, but not identical to the Tennis environment on the Unity ML-Agents GitHub page: https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md
+
+
+### Dependencies
+
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+	
+2. You can clone the Udacity repository, and navigate to the `python/` folder.  Then, install several dependencies.
+```bash
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+```
+
+3. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+4. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
+[image2]: https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png "Kernel"
+![Kernel][image2]
+
+
 
