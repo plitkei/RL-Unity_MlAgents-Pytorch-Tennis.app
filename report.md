@@ -35,7 +35,7 @@ I have used gradient clipping when training the critic network as it was suggest
   
 ```
 
-I have adopted it to handle multiple Agents, they have their own Actor, Critic Networks.
+I adopted the ddpg_agent to handle multiple Agents, they have their own Actor, Critic Networks.
   
 After countless days of Hyperparameter tuning and changes in the code, the performance was not enough.
   
